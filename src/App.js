@@ -2,7 +2,7 @@ import Header from "./components/header/Header";
 import useTheme from "./hooks/useTheme";
 import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
-import DetailsPays from "./pages/DetailsCountries";
+import DetailsCountries from "./pages/DetailsCountries";
 import CountryProvider from "./contextes/CountryProvider";
 
 function App() {
