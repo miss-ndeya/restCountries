@@ -4,6 +4,7 @@ export const CountryContext = createContext();
 
 const CountryProvider = ({ children }) => {
   const [countries, setCountries] = useState([]);
+  const [country, setCountry] = useState(null);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("Filter by Region");
@@ -29,6 +30,23 @@ const CountryProvider = ({ children }) => {
     }
   };
 
+  const getcountry = async (id) => {
+    try {
+      const response = await fetch(
+        `https://restcountries.com/v3.1/capital/${id}`
+      );
+  
+      const data = await response.json();
+      const countryData = data[0];
+      setCountry(countryData);
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
+    } catch (error) {
+      console.error(error, "la récupération des details du pays a echouer ");
+    }
+  };
+
   const filteredCountries = countries.filter(
     (country) =>
       (filter === "Filter by Region" || country.region === filter) &&
@@ -38,12 +56,14 @@ const CountryProvider = ({ children }) => {
 
   const value = {
     countries,
+    country,
     loading,
     search,
     filter,
     handleSearch,
     handleSelect,
     getCountries,
+    getcountry,
     filteredCountries,
   };
 
