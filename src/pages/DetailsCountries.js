@@ -21,7 +21,7 @@ const getDetailsPays = async (id, setCountry, setLoading) => {
   }
 };
 
-const DetailsPays = () => {
+const DetailsCountries = () => {
   const [country, setCountry] = useState(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
@@ -55,4 +55,4 @@ const DetailsPays = () => {
   );
 };
 
-export default DetailsPays;
+export default DetailsCountries;
