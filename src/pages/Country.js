@@ -10,7 +10,7 @@ const Country = () => {
 
   useEffect(() => {
     getCountries(url);
-  }, [getCountries]);
+  }, []);
 
   return (
     <div className="d-flex flex-column">

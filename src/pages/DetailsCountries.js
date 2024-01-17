@@ -13,7 +13,7 @@ const DetailsCountries = () => {
 
   useEffect(() => {
     getcountry(id);
-  }, [getcountry, id]);
+  }, [id]);
 
   return (
     <div className="container mb-4 pt-5 ">
