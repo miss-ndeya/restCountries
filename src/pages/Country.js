@@ -1,16 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Form from "../components/formulaire/Form";
 import useCountry from "../hooks/useCountry";
 import CountriesListes from "../components/main/CountriesListes";
 import Loader from "../components/loader/Loader";
 
 const Country = () => {
-  const { loading, filteredCountries, getCountries } = useCountry();
-  const url = "https://restcountries.com/v3.1/all";
-
-  useEffect(() => {
-    getCountries(url);
-  }, []);
+  const { loading, filteredCountries } = useCountry();
 
   return (
     <div className="d-flex flex-column">

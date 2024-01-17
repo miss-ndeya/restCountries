@@ -1,19 +1,17 @@
-import React, { useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Loader from "../components/loader/Loader";
 import DetailCountry from "../components/main/DetailCountry";
 import useCountry from "../hooks/useCountry";
 
 const DetailsCountries = () => {
-  const { id } = useParams();
+  
   const navigate = useNavigate();
 
   const { getcountry, loading } = useCountry();
 
-  useEffect(() => {
-    getcountry(id);
-  }, [id]);
+  
 
   return (
     <div className="container mb-4 pt-5 ">
