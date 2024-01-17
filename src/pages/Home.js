@@ -3,11 +3,7 @@ import Country from "./Country";
 import CountryProvider from "../contextes/CountryProvider";
 
 const Home = () => {
-  return (
-    <CountryProvider>
-      <Country/>
-    </CountryProvider>
-  );
+  return <CountryProvider children={<Country />} />;
 };
 
 export default Home;

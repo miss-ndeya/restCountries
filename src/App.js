@@ -14,11 +14,7 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route
           path="/country/:id"
-          element={
-            <CountryProvider>
-              <DetailsCountries />
-            </CountryProvider>
-          }
+          element={<CountryProvider children={<DetailsCountries />} />}
         ></Route>
       </Routes>
     </div>
