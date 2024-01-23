@@ -1,7 +1,7 @@
 import React from "react";
 import InputForm from "./InputForm";
 import Select from "./Select";
-import useCountry from "../../hooks/useCountry";
+import useCountries from "../../hooks/useCountries";
 
 const Form = () => {
   const options = [
@@ -13,7 +13,7 @@ const Form = () => {
     "Oceania",
   ];
 
-  const { handleSelect } = useCountry();
+  const { handleSelect } = useCountries("https://restcountries.com/v3.1/all");
   return (
     <form
       id="form"

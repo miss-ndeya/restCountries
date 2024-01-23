@@ -28,7 +28,7 @@ code {
 }
 
 .App.light {
-    background: #fafafae3;
+    background: #fafafa;
     color: hsl(200, 15%, 8%);
     transition: all .3s ease-out;
 }

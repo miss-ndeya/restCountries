@@ -1,11 +1,11 @@
 import React from "react";
 import Form from "../components/formulaire/Form";
-import useCountry from "../hooks/useCountry";
+import useCountries from "../hooks/useCountries";
 import CountriesListes from "../components/main/CountriesListes";
 import Loader from "../components/loader/Loader";
 
 const Country = () => {
-  const { loading, filteredCountries } = useCountry();
+  const { loading, filteredCountries } = useCountries("https://restcountries.com/v3.1/all");
 
   return (
     <div className="d-flex flex-column">

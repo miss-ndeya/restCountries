@@ -3,11 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Loader from "../components/loader/Loader";
 import DetailCountry from "../components/main/DetailCountry";
-import useCountry from "../hooks/useCountry";
+import useCountry from "../hooks/useCountries";
 
-const DetailsCountries = () => {
-  const { loading } = useCountry();
+const BorderCountries = () => {
   const navigate = useNavigate();
+
+  const { loading } = useCountry();
 
   return (
     <div className="container mb-4 pt-5 ">
@@ -29,4 +30,4 @@ const DetailsCountries = () => {
   );
 };
 
-export default DetailsCountries;
+export default BorderCountries;

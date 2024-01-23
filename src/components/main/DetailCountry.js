@@ -5,7 +5,6 @@ import useCountry from "../../hooks/useCountry";
 
 const DetailCountry = () => {
   const { country } = useCountry();
-  console.log(country);
   return (
     <div className="row mx-1 mt-5 mb-0">
       <div className="d-flex flex-column flex-lg-row justify-content-between align-items-center">
@@ -72,7 +71,7 @@ export const BorderCountry = ({ country }) => {
             {country.borders?.map((border) => (
               <Link
                 key={border}
-                to={`/country/${country.capital}`}
+                to={`/borderCountry/${country.capital}`}
                 className="text-decoration-none text-white"
               >
                 <button className="elements border-0 m-2 p-0 px-0 p-lg-2 px-lg-3">

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import DetailsCountries from "./pages/DetailsCountries";
 import CountryProvider from "./contextes/CountryProvider";
+import BorderCountries from "./pages/BorderCountries";
 
 function App() {
   const { theme } = useTheme();
@@ -15,6 +16,10 @@ function App() {
         <Route
           path="/country/:id"
           element={<CountryProvider children={<DetailsCountries />} />}
+        ></Route>
+        <Route
+          path="/borderCountry/:id"
+          element={<CountryProvider children={<BorderCountries />} />}
         ></Route>
       </Routes>
     </div>

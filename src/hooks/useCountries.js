@@ -1,19 +1,16 @@
 import { useContext, useEffect } from "react";
 import { CountryContext } from "../contextes/CountryProvider";
-import { useParams } from "react-router-dom";
 
-const useCountry = () => {
+const useCountries = (url) => {
   const countryContext = useContext(CountryContext);
 
-  const { id } = useParams();
-
-  const { getcountry } = countryContext;
+  const { getCountries } = countryContext;
 
   useEffect(() => {
-    getcountry(id);
-  }, [id]);
+    getCountries(url);
+  }, [url]);
 
   return countryContext;
 };
 
-export default useCountry;
+export default useCountries;
