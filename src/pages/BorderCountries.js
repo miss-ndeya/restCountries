@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import Loader from "../components/loader/Loader";
 import DetailCountry from "../components/main/DetailCountry";
-import useCountry from "../hooks/useCountries";
+import useCountry from "../hooks/useCountry";
 
 const BorderCountries = () => {
   const navigate = useNavigate();
